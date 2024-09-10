@@ -34,12 +34,12 @@ export class AppComponent {
 
     //scene.add(mesh);
 
-    // const light = new THREE.PointLight(0xeeeeee, 20000, 300);
-    // light.position.set(0,20,30);
-    // scene.add(light);
+    const pointLight = new THREE.PointLight(0xeeeeee, 20000, 10);
+    pointLight.position.set(8,3,0);
+    scene.add(pointLight);
 
-    const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 30 );
-scene.add( light );
+    const hemiLight = new THREE.HemisphereLight( 0x87CEEB, 0x080820, 30 );
+    scene.add( hemiLight );
 
     const render = new THREE.WebGLRenderer({
       canvas: this.canvas?.nativeElement
